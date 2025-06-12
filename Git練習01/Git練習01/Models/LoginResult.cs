@@ -8,5 +8,8 @@ namespace Git練習01.Models
 {
     internal class LoginResult
     {
+        public bool Success { get; set; }
+        public string Message { get; set; }
+
     }
 }
