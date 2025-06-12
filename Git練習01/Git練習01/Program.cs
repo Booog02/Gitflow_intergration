@@ -39,6 +39,9 @@ namespace Git練習01
             {
                 Console.WriteLine("很抱歉，註冊失敗了。請稍後再試，或聯繫我們的客服團隊以獲取協助。");
             }
+            
+            Console.WriteLine("感謝您使用 [XXX 註冊系統]，祝您有美好的一天！");
+
 
         }
     }
