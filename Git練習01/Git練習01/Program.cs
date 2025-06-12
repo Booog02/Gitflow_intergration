@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Git練習01.Models;
+using Git練習01.Services;
 
 namespace Git練習01
 {
@@ -24,6 +26,19 @@ namespace Git練習01
 
             Console.WriteLine("最後，請輸入您的聯絡地址，讓我們方便與您保持聯繫：");
             string address = Console.ReadLine();
+
+            
+            RegisterModel user = new RegisterModel(userName, account, password, address);
+            RegisterService service = new RegisterService();
+
+            if (service.UserRegist(user))
+            {
+                Console.WriteLine("恭喜您，註冊成功！歡迎加入我們的大家庭！");
+            }
+            else
+            {
+                Console.WriteLine("很抱歉，註冊失敗了。請稍後再試，或聯繫我們的客服團隊以獲取協助。");
+            }
 
         }
     }
